@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="stylesheet" href="style_produkter.css">
+</head>
+
+<body>
+
+    <section id="detalje">
+
+        <article class="infoboks">
+            <button id="luk">Tilbage</button>
+            <img>
+            <h1 class="navn"></h1>
+            <h2 class="year"></h2>
+            <p class="origin"></p>
+            <p class="beskrivelse"></p>
+        </article>
+    </section>
+
+
+
+    <script>
+        let produkterListe = [];
+
+        const produktTemplate = document.querySelector("template");
+        const container = document.querySelector(".data-container");
+        let filter = "alle";
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        const detalje = document.querySelector("#detalje");
+        const lukKnap = document.querySelector("#luk");
+
+        const link = "https://spreadsheets.google.com/feeds/list/1KFeuCYN5F8ByEdt8BDCMkvBp2RHG39MfIKpr_OZD3AU/od6/public/values?alt=json";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+
+        }
+
+        async function hentData() {
+            const response = await fetch(link);
+            produkterListe = await response.json();
+            visProdukterDetalje();
+
+        }
+
+
+        function visProdukterDetalje(produkt) {
+            detalje.querySelector("#luk").addEventListener("click", () => {
+                history.back();
+            })
+            produkterListe.feed.entry.forEach(produkt => {
+
+                if (produkt.gsx$id.$t == id) {
+
+
+                    document.querySelector("#detalje h1").textContent = produkt.gsx$navn.$t;
+                    document.querySelector("#detalje .beskrivelse").textContent = produkt.gsx$beskrivelse.$t;
+                    document.querySelector("#detalje .origin").textContent = "Oprindelse: " + produkt.gsx$origin.$t;
+                    document.querySelector("#detalje .year").textContent = produkt.gsx$year.$t;
+
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

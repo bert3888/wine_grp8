@@ -4,6 +4,12 @@ const produktTemplate = document.querySelector("template");
 const container = document.querySelector(".data-container");
 let filter = "alle";
 
+const detalje = document.querySelector("#detalje");
+const lukKnap = document.querySelector("#luk");
+
+
+
+
 const link = "https://spreadsheets.google.com/feeds/list/1KFeuCYN5F8ByEdt8BDCMkvBp2RHG39MfIKpr_OZD3AU/od6/public/values?alt=json";
 
 document.addEventListener("DOMContentLoaded", start);
@@ -17,6 +23,7 @@ async function hentData() {
     const response = await fetch(link);
     produkterListe = await response.json();
     visProdukter();
+
 }
 
 function visProdukter() {
@@ -31,6 +38,17 @@ function visProdukter() {
             klon.querySelector(".origin").textContent = "Oprindelse: " + produkt.gsx$origin.$t;
 
             container.appendChild(klon);
+
+            container.lastElementChild.addEventListener("click", () => {
+                location.href = "produktside.html?id=" + produkt.gsx$id.$t;
+
+            });
         }
     })
+}
+
+
+
+function filtrering() {
+
 }
