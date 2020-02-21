@@ -11,18 +11,74 @@ img {
     width: 100%;
 }
 
-h1,
-h2,
-h3 {
-    margin: 0;
+#mobile {
+    display: none;
+}
+
+h1 {
+    margin: 0 0 0 1.5rem;
     padding: 0;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+}
+
+h2 {
+    padding-top: 4rem;
+    margin: 0 0 0 1.5rem;
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    opacity: 80%;
+}
+
+p {
+    margin: 1.5rem;
+    font-family: freight-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.linebreak {
+    background-image: url(billeder/gradient_spotlight.png);
+    background-size: cover;
+    background-position: center;
+    height: 0.5vw;
+    width: 70vh;
+    justify-content: center;
+    margin-left: 2rem;
 }
 
 .spotlight {
     height: 100vh;
     object-fit: cover;
-    border: 1px solid #707070;
 }
+
+
+
+.button_spotlight {
+    font-size: 2rem;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    color: white;
+    background: rgb(196, 211, 138);
+    background: linear-gradient(90deg, rgba(196, 211, 138, 1) 0%, rgba(199, 137, 100, 1) 61%, rgba(218, 131, 112, 1) 100%)
+}
+
+
+
+/*
+.button_background {
+    margin-top: 20rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+}
+*/
 
 section {
     scroll-snap-align: start;
@@ -37,8 +93,6 @@ section {
 
 .scroll_snap_type_y_mandatory {
     scroll-snap-type: y mandatory;
-
-
 }
 
 .container_left {
@@ -65,7 +119,7 @@ section {
 .section_right {
     width: 100%;
     height: 100vh;
-    background: dodgerblue;
+    background-color: white;
     /*        scroll-snap-align: start;*/
 }
 
@@ -76,27 +130,119 @@ section {
 /*---------Media Query-------------*/
 
 
+@media only screen and (min-width:552px) {
+    .wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .button_background {
+        align-self: flex-end;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+}
 
 
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:677px) {
+
+    #mobile {
+        display: block;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+
+    /*
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+*/
+
+    .linebreak {
+        background-image: url(billeder/gradient_spotlight.png);
+        background-size: cover;
+        background-position: center;
+        height: 0.5vh;
+        width: 80vw;
+        justify-content: center;
+    }
+
+    h1 {
+        margin: 0 0 0 1.5rem;
+        padding: 0;
+        font-family: freight-neo-pro, sans-serif;
+        font-weight: 400;
+        font-size: 4rem;
+    }
+
+    h2 {
+        padding-top: 1.5rem;
+        margin: 0 0 0 1.5rem;
+        font-family: freight-neo-pro, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        opacity: 80%;
+    }
+
+    p {
+        margin: 1.5rem;
+        font-family: freight-sans-pro, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+    }
+
+    .spotlight {
+        height: auto;
+        object-fit: cover;
+    }
 
     .container {
         height: 100vh;
         grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .mobile_middle {
+        width: 100vw;
+        height: 100vh;
         scroll-snap-type: y mandatory;
-    }
-
-    .container_left {
-        width: 100vw;
-        height: 100vh;
-
 
     }
 
-    .container_right {
-        width: 100vw;
-        height: 100vh;
+    .button_spotlight {
+        font-size: 1rem;
+        padding: 1.5rem;
+        margin: 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+        color: white;
+        background: rgb(196, 211, 138);
+        background: linear-gradient(90deg, rgba(196, 211, 138, 1) 0%, rgba(199, 137, 100, 1) 61%, rgba(218, 131, 112, 1) 100%)
+    }
 
+    .button_background {
+        align-self: flex-end;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+}
+
+@media only screen and (min-width:769px) {
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
     }
 }

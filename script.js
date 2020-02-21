@@ -55,9 +55,6 @@ function listenR() {
 
 
 
-
-
-
 //var div1 = document.querySelector('.container_left');
 ////var div2 = document.querySelector('.container_right');
 //console.log(div1);
