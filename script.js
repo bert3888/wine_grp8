@@ -1,3 +1,63 @@
+let isLeftSideScrolling;
+let container_LHasScrollSnap = false;
+const container_L = document.querySelector(".container_left");
+const container_R = document.querySelector(".container_right");
+
+// Sæt højre scroll i bund
+container_R.scrollTop = container_R.scrollHeight - container_R.clientHeight - container_R.scrollTop;
+
+
+
+container_L.addEventListener("scroll", listenL);
+
+function listenL() {
+
+
+
+    if (isLeftSideScrolling) {
+        container_R.scrollTop = this.scrollHeight - this.clientHeight - this.scrollTop;
+
+
+
+        if (container_LHasScrollSnap == true) {
+            //                    console.log("BOOOOM L")
+            container_L.classList.add("scroll_snap_type_y_mandatory");
+            container_R.classList.remove("scroll_snap_type_y_mandatory");
+            container_LHasScrollSnap = false;
+            //                container_RHasScrollSnap = false
+        }
+    }
+    isLeftSideScrolling = true;
+}
+
+document.querySelector(".container_right").addEventListener("scroll", listenR);
+
+function listenR() {
+
+
+    if (!isLeftSideScrolling) {
+        container_L.scrollTop = this.scrollHeight - this.clientHeight - this.scrollTop;
+
+        if (container_LHasScrollSnap == false) {
+            //                    console.log("BOOOOM R");
+            container_R.classList.add("scroll_snap_type_y_mandatory");
+            container_L.classList.remove("scroll_snap_type_y_mandatory");
+            //                container_RHasScrollSnap = true;
+            container_LHasScrollSnap = true;
+        }
+
+    }
+    isLeftSideScrolling = false;
+}
+
+
+
+
+
+
+
+
+
 //var div1 = document.querySelector('.container_left');
 ////var div2 = document.querySelector('.container_right');
 //console.log(div1);
@@ -23,32 +83,34 @@
 ////});
 
 // Sæt højre scroll i bund
-document.querySelector(".container_right").scrollTop = (document.querySelector(".container_right").scrollHeight - document.querySelector(".container_right").clientHeight) - document.querySelector(".container_right").scrollTop;
 
 
-
-document.querySelector(".container_left").addEventListener("scroll", listenL);
-
-function listenL() {
-    console.log("scrollTop: " + this.scrollTop);
-    console.log("clientHeight: " + this.clientHeight);
-    console.log("scrollHeight: " + this.scrollHeight);
-
-    console.log("***********************************");
-
-    document.querySelector(".container_right").scrollTop = (this.scrollHeight - this.clientHeight) - document.querySelector(".container_left").scrollTop;
-
-}
-
-document.querySelector(".container_right").addEventListener("scroll", listenR);
-
-function listenR() {
-    //        console.log("scrollTop: "+this.scrollTop);
-    //        console.log("clientHeight: "+this.clientHeight);
-    //        console.log("scrollHeight: "+this.scrollHeight);
-    //
-    //        console.log("***********************************");
-
-    document.querySelector(".container_left").scrollTop = (this.scrollHeight - this.clientHeight) - document.querySelector(".container_right").scrollTop;
-
-}
+//document.querySelector(".container_right").scrollTop = (document.querySelector(".container_right").scrollHeight - document.querySelector(".container_right").clientHeight) - document.querySelector(".container_right").scrollTop;
+//
+//
+//
+//document.querySelector(".container_left").addEventListener("scroll", listenL);
+//
+//function listenL() {
+//    console.log("scrollTop: " + this.scrollTop);
+//    console.log("clientHeight: " + this.clientHeight);
+//    console.log("scrollHeight: " + this.scrollHeight);
+//
+//    console.log("***********************************");
+//
+//    document.querySelector(".container_right").scrollTop = (this.scrollHeight - this.clientHeight) - document.querySelector(".container_left").scrollTop;
+//
+//}
+//
+//document.querySelector(".container_right").addEventListener("scroll", listenR);
+//
+//function listenR() {
+//    //        console.log("scrollTop: "+this.scrollTop);
+//    //        console.log("clientHeight: "+this.clientHeight);
+//    //        console.log("scrollHeight: "+this.scrollHeight);
+//    //
+//    //        console.log("***********************************");
+//
+//    document.querySelector(".container_left").scrollTop = (this.scrollHeight - this.clientHeight) - document.querySelector(".container_right").scrollTop;
+//
+//}
