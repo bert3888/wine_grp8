@@ -38,6 +38,8 @@ function visProdukter() {
             klon.querySelector(".origin").textContent = produkt.gsx$origin.$t;
             klon.querySelector("img").src = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
 
+            //klon.querySelector(".image").style.backgroundImage = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
+
             container.appendChild(klon);
 
             container.lastElementChild.addEventListener("click", () => {
