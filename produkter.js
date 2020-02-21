@@ -35,7 +35,8 @@ function visProdukter() {
             klon.querySelector("h2").textContent = produkt.gsx$navn.$t;
             klon.querySelector("h3").textContent = produkt.gsx$year.$t;
             klon.querySelector(".type").textContent = produkt.gsx$type.$t;
-            klon.querySelector(".origin").textContent = "Oprindelse: " + produkt.gsx$origin.$t;
+            klon.querySelector(".origin").textContent = produkt.gsx$origin.$t;
+            klon.querySelector("img").src = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
 
             container.appendChild(klon);
 
