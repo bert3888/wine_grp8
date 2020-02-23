@@ -12,24 +12,105 @@
 <body>
 
     <section id="detalje">
-
+        <button id="luk">Tilbage</button>
         <article class="infoboks">
-            <button id="luk">Tilbage</button>
-            <img>
-            <h1 class="navn"></h1>
-            <h2 class="year"></h2>
-            <p class="origin"></p>
-            <p class="beskrivelse"></p>
+
+            <div class="image_detalje">
+                <img>
+            </div>
+            <div class="detalje_text">
+                <h1 class="navn"></h1>
+                <h2 class="year"></h2>
+                <p class="oprindelse">Oprindelse</p>
+                <p class="origin"></p>
+                <p class="beskrivelse"></p>
+            </div>
         </article>
 
 
     </section>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .image_detalje {
+            max-width: 100%;
+            max-height: 100%;
+            width: 50vw;
+            height: 100vh;
+            display: inline;
+        }
+
+        .detalje_text {
+            width: 50vw;
+            padding: 20px;
+
+        }
+
+        .navn {
+            font-family: freight-sans-pro, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .year {
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.2rem;
+
+        }
+
+        .type {
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+
+        .origin {
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .oprindelse {
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .beskrivelse {
+            font-family: freight-neo-pro, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
 
 
 
 
+        @media only screen and (min-width: 600px) {
+
+
+            article {
+                display: flex;
+            }
+        }
 
     </style>
 
@@ -74,8 +155,9 @@
 
                     document.querySelector("#detalje h1").textContent = produkt.gsx$navn.$t;
                     document.querySelector("#detalje .beskrivelse").textContent = produkt.gsx$beskrivelse.$t;
-                    document.querySelector("#detalje .origin").textContent = "Oprindelse: " + produkt.gsx$origin.$t;
+                    document.querySelector("#detalje .origin").textContent = produkt.gsx$origin.$t;
                     document.querySelector("#detalje .year").textContent = produkt.gsx$year.$t;
+                    document.querySelector("img").src = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
 
                 }
             })
