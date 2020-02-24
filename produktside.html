@@ -17,7 +17,9 @@
         <article class="infoboks">
 
             <div class="image_detalje">
-                <img>
+                <img class="img1">
+                <img class="img2">
+                <img class="img3">
             </div>
             <div class="detalje_text">
                 <h1 class="navn"></h1>
@@ -75,7 +77,9 @@
                     document.querySelector("#detalje .beskrivelse").textContent = produkt.gsx$beskrivelse.$t;
                     document.querySelector("#detalje .origin").textContent = produkt.gsx$origin.$t;
                     document.querySelector("#detalje .year").textContent = produkt.gsx$year.$t;
-                    document.querySelector("img").src = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
+                    document.querySelector(".img1").src = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
+                    document.querySelector(".img2").src = "imgs/" + produkt.gsx$billede.$t + "-closeup2.png";
+                    document.querySelector(".img3").src = "imgs/" + produkt.gsx$billede.$t + "-bottleglass.png";
 
                 }
             })
