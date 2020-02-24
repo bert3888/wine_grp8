@@ -50,10 +50,22 @@ function visProdukter() {
     })
 }
 
+function addEventlistenersToAllButtons() {
+    document.querySelectorAll(".filter").forEach(elm => {
+        elm.addEventListener("click", filtrering);
 
+    })
+}
 
 function filtrering() {
-
+    console.log("FILTER");
+    filter = this.dataset.produkt;
+    //    document.querySelector("header h1").textContent = this.textContent;
+    document.querySelectorAll(".filter").forEach(elm2 => {
+        elm2.classList.remove("valgt");
+    })
+    this.classList.add("valgt");
+    visProdukter();
 }
 
 //burgermenu

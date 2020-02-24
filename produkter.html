@@ -15,7 +15,7 @@
     <template>
         <article class="produkt">
             <div class="image">
-                <img>
+                <figure><img></figure>
             </div>
             <h2 class="navn"></h2>
             <h3 class="year"></h3>
@@ -50,7 +50,15 @@
 
         <section class="spacer"></section>
     </header>
+    <section class="filterknapper">
+        <nav>
+            <button type="button" class="filter valgt" data-produkt="alle">Alle</button>
+            <button type="button" class="filter" data-produkt="red">Rødhvin</button>
+            <button type="button" class="filter" data-produkt="white">Hvidvin</button>
+            <button type="button" class="filter" data-produkt="rose">Rosé</button>
 
+        </nav>
+    </section>
 
     <section class="data-container"></section>
 
@@ -66,7 +74,9 @@
         </article>
     </section>
 
-
+    <footer>
+        Her er en footer
+    </footer>
 
 
 
