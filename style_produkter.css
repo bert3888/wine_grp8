@@ -30,6 +30,7 @@ img {
     grid-gap: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 50px;
 
 
 
@@ -110,7 +111,7 @@ img {
 
 
 #detalje .detalje_text {
-    /*    width: 50vw;*/
+    width: 50vw;
     padding: 20px;
 
 }
@@ -183,6 +184,7 @@ img {
 /* ---------- FILTERKNAPPER -------------*/
 .filterknapper {
     text-align: center;
+    margin: 10px;
 }
 
 
@@ -190,10 +192,12 @@ button {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
-    padding: 5px 10px 5px 10px;
+    font-size: 1rem;
+    padding: 5px 20px 5px 20px;
     border: none;
     background-color: lightgray;
     text-align: center;
+    margin: 10px;
 }
 
 .valgt {
@@ -228,7 +232,8 @@ nav a {
 }
 
 nav a:hover {
-    color: crimson;
+    color: rgb(234, 104, 45);
+    color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
     transition: 0.5s;
 }
 
@@ -413,7 +418,35 @@ header img {
 }
 
 /*----- nav end*******/
+/*---------- footer --------*/
+footer {
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    background-color: lightgray;
+    padding: 30px;
+    background: rgb(234, 104, 45);
+    background: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
+    color: white;
 
+
+}
+
+footer h2 {
+    margin-left: 3vw;
+    font-weight: 300
+}
+
+footer p {
+    margin-left: 3vw;
+}
+
+footer a {
+    text-decoration: underline;
+    color: white;
+    margin-left: 3vw;
+}
 
 
 
@@ -445,14 +478,8 @@ header img {
 
 
 @media only screen and (min-width: 600px) {
-    .mobile_nav {
-        display: none;
-    }
 
-    #desktop_nav {
-        display: inline;
 
-    }
 
 
     header img {
@@ -473,6 +500,21 @@ header img {
 }
 
 @media only screen and (min-width: 900px) {
+
+    #desktop_nav {
+        display: inline;
+        max-width: 1200px;
+
+    }
+
+    #desktop_nav a {
+        font-size: 1.5vw;
+    }
+
+    .mobile_nav {
+        display: none;
+    }
+
 
     header img {
         width: 20vw;
