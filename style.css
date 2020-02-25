@@ -16,16 +16,14 @@ img {
     height: 100%;
 }
 
+/*---------------- Basics ----------------*/
+
 #mobile {
     display: none;
 }
 
-#desktop {
-    max-width: 1200px;
-}
-
 h1 {
-    margin: 0 0 0 1.5rem;
+/*    margin: 0 0 0 1.5rem;*/
     padding: 0;
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
@@ -33,8 +31,8 @@ h1 {
 }
 
 h2 {
-    padding-top: 4rem;
-    margin: 0 0 0 1.5rem;
+/*    padding-top: 4rem;*/
+/*    margin: 0 0 0 1.5rem;*/
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -43,7 +41,7 @@ h2 {
 }
 
 p {
-    margin: 1.5rem;
+/*    margin: 1.5rem;*/
     font-family: freight-neo-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -52,6 +50,7 @@ p {
 
 .txt {
     margin-top: 6rem;
+    padding: 0 3rem 0 3rem;
 }
 
 .linebreak {
@@ -97,34 +96,23 @@ p {
 }
 */
 
+/*
 .button.background {
     margin-right: 1rem;
 }
+*/
 
 .button_spotlight {
     font-size: 2rem;
-    padding: 1.5rem;
-    margin: 0.5rem;
+/*    padding: 1.5rem;*/
+/*    margin: 0.5rem;*/
     border: none;
     border-radius: 1rem;
     text-transform: capitalize;
     color: blakc;
     background: white;
     font-family: freight-neo-pro, sans-serif;
-
-    /*    background: rgb(196, 211, 138);*/
-    /*    background: linear-gradient(90deg, rgba(196, 211, 138, 1) 0%, rgba(199, 137, 100, 1) 61%, rgba(218, 131, 112, 1) 100%)*/
 }
-
-
-
-/*
-.button_background {
-    margin-top: 20rem;
-    margin-right: 10rem;
-    margin-left: 10rem;
-}
-*/
 
 #linje {
     position: fixed;
