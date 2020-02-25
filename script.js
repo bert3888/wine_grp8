@@ -54,7 +54,7 @@ function listenR() {
 let slideIndex = 0;
 
 carousel()
-setTimeout(loader, 4000);
+setTimeout(loader, 2000);
 
 function carousel() {
     let i;
