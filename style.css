@@ -122,7 +122,7 @@ p {
     font-family: freight-neo-pro, sans-serif;
 }
 
-#menu {
+.menu {
     position: fixed;
     height: 80px;
     width: 100vw;
@@ -134,14 +134,14 @@ p {
     border-bottom: 1px solid lightgrey;
 }
 
-#menu a {
+.menu a {
     text-decoration: none;
     color: black;
 }
 
 
 
-#menu h1 {
+.menu h1 {
     font-family: freight-sans-pro, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -149,7 +149,7 @@ p {
     padding-left: 20px;
 }
 
-#mobile #menu h1 {
+#mobile .menu h1 {
     margin-left: 0px;
 }
 
@@ -465,7 +465,7 @@ body {
         max-width: 1200px;
     }
 
-    #menu {
+    .menu {
         display: flex;
         justify-content: space-between;
     }
@@ -518,7 +518,7 @@ body {
         max-width: 1200px;
     }
 
-    #menu {
+    .menu {
         display: flex;
         justify-content: space-between;
     }
