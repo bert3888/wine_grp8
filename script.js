@@ -55,8 +55,8 @@ function listenR() {
 // carousel aka slideshow
 let slideIndex = 0;
 
-carousel()
-setTimeout(loader, 2000);
+carousel();
+
 
 function carousel() {
     let i;
@@ -65,19 +65,28 @@ function carousel() {
 
     // henholdvis ændre display modes for at vise nyt billede
     // fungere lidt som et array hvor der brugges ++ for at target det enkelte billede
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {
-        slideIndex = 1
-    }
-    x[slideIndex - 1].style.display = "block";
+    /*    for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+       }
+      slideIndex++;
+      */
 
+
+    if (slideIndex > x.length - 1) {
+        slideIndex = 0;
+    }
+    x.forEach(billede => {
+        billede.style.display = "none";
+    })
+
+    x[slideIndex].style.display = "block";
+    slideIndex++
     // skifter display mode hvert andet sekundt
     setTimeout(carousel, 2000);
+
 }
 
+setTimeout(loader, 2000);
 //loader
 function loader() {
     console.log(loader);
