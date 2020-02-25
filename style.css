@@ -27,7 +27,7 @@ h1 {
     padding: 0;
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
-    font-size: 8vw;
+    font-size: 7.5vw;
 }
 
 h2 {
@@ -53,6 +53,7 @@ p {
     padding: 0 3rem 0 3rem;
 }
 
+/*
 .linebreak {
     background-image: url(billeder/gradient_spotlight.png);
     background-size: cover;
@@ -61,6 +62,14 @@ p {
     justify-content: center;
     margin-left: 2rem;
     margin-right: 6rem;
+}
+*/
+.linebreak {
+    height: 0.5vh;
+    width: 40vw;
+
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
 }
 
 .spotlight {
@@ -104,9 +113,8 @@ p {
 
 .button_spotlight {
     font-size: 2rem;
-    /*    padding: 1.5rem;*/
-    /*    margin: 0.5rem;*/
-    border: none;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+    border: black 1px solid;
     border-radius: 1rem;
     text-transform: capitalize;
     color: black;
@@ -122,6 +130,13 @@ p {
     display: flex;
     z-index: 100;
     justify-content: space-between;
+    z-index: 100;
+    border-bottom: 1px solid lightgrey;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -543,6 +558,14 @@ body {
     }
 */
 
+    .section_left {
+        height: auto;
+    }
+
+    .section_right {
+        height: auto;
+    }
+
     .hero {
         width: 100%;
         height: 100vh;
@@ -553,16 +576,11 @@ body {
     }
 
     .linebreak {
-        background-image: url(billeder/gradient_spotlight.png);
-        background-size: cover;
-        background-position: center;
         height: 0.5vh;
         width: 80vw;
+        margin-left: 28px;
         justify-content: center;
-    }
-
-    .gap {
-        padding-top: 2rem;
+        background-color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
     }
 
     h1 {
@@ -596,6 +614,15 @@ body {
         object-fit: cover;
     }
 
+    .mySlides {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .box {
+        height: auto;
+    }
+
     .container {
         height: 100vh;
         grid-template-columns: repeat(1, 1fr);
@@ -611,9 +638,9 @@ body {
 
     .button_spotlight {
         font-size: 1rem;
-        padding: 1.5rem;
+        padding: 0.5rem 1.5rem 0.5rem 1rem;
         margin: 0 2rem;
-        border: none;
+        border: 1px black solid;
         border-radius: 0.5rem;
         text-transform: capitalize;
         color: black;
