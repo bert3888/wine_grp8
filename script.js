@@ -1,3 +1,4 @@
+//split scroll funktion start
 let isLeftSideScrolling;
 let container_LHasScrollSnap = false;
 const container_L = document.querySelector(".container_left");
@@ -9,7 +10,7 @@ container_R.scrollTop = container_R.scrollHeight - container_R.clientHeight - co
 
 
 container_L.addEventListener("scroll", listenL);
-
+// kontrollere venstre del af skærmen
 function listenL() {
 
 
@@ -18,7 +19,7 @@ function listenL() {
         container_R.scrollTop = this.scrollHeight - this.clientHeight - this.scrollTop;
 
 
-
+        // hvis venstre side bliver scrollet tilføjes scroll snap på venstre side
         if (container_LHasScrollSnap == true) {
             //                    console.log("BOOOOM L")
             container_L.classList.add("scroll_snap_type_y_mandatory");
@@ -32,12 +33,15 @@ function listenL() {
 
 document.querySelector(".container_right").addEventListener("scroll", listenR);
 
+
+// kontrollere højre del af skærmen
 function listenR() {
 
 
     if (!isLeftSideScrolling) {
         container_L.scrollTop = this.scrollHeight - this.clientHeight - this.scrollTop;
 
+        // hvis venstre side ikke bliver scrollet tilføjes scroll snap på højre side
         if (container_LHasScrollSnap == false) {
             //                    console.log("BOOOOM R");
             container_R.classList.add("scroll_snap_type_y_mandatory");
@@ -50,7 +54,9 @@ function listenR() {
     isLeftSideScrolling = false;
 }
 
-/* carls kode */
+//split scroll funktion slut
+
+// carousel aka slideshow
 let slideIndex = 0;
 
 carousel()
@@ -61,6 +67,8 @@ function carousel() {
     let x = document.querySelectorAll(".mySlides");
 
 
+    // henholdvis ændre display modes for at vise nyt billede
+    // fungere lidt som et array hvor der brugges ++ for at target det enkelte billede
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
@@ -69,24 +77,30 @@ function carousel() {
         slideIndex = 1
     }
     x[slideIndex - 1].style.display = "block";
+
+    // skifter display mode hvert andet sekundt
     setTimeout(carousel, 2000);
 }
 
+//loader
 function loader() {
     console.log(loader);
 
-    // document.querySelector(".").classList.remove("sort");
+    // tilføjer fade animtion på baggrund
     document.querySelector(".baggrund").classList.add("fadeout");
 
+    // tilføjer fade animtion på gif
     document.querySelector(".loader").classList.add("fadeout");
-    //document.querySelector(".loader").classList.add("hide");
+
+    //lytter på hvornår fade animation er færdig
     document.querySelector(".baggrund").addEventListener("animationend", hidebaggrund);
 }
 
+//tilføjer klassen hide på gif (får den til at forsvinde og gør resten af siden scrollable og clickable)
 function hidebaggrund() {
     document.querySelector(".loader").classList.add("hide");
 }
-/*carls kode slut*/
+
 
 
 //var div1 = document.querySelector('.container_left');
