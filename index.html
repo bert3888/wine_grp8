@@ -15,7 +15,18 @@
     <img class="loader" src="logo%20scribble_2.gif" alt="logo gif">
 
     <div class="container" id="desktop">
-        <div id="linje"></div>
+        <div id="menu">
+            <div class="col1">
+                <h1>OPIA</h1>
+            </div>
+            <div class="col2">
+                <nav id="desktop_nav">
+                    <a href="index.html">FORSIDE</a>
+                    <a href="produkter.html">PRODUKTER</a>
+                    <a href="kontakt.html">KONTAKT</a>
+                </nav>
+            </div>
+        </div>
         <div class="container_left">
             <div class="hero section_right">
                 <img class="hero_desktop_left" src="billeder/hero_split1.png" alt="hero_splitscreen">
@@ -89,7 +100,28 @@
 
 
     <div class="container" id="mobile">
-        <div id="linje"></div>
+        <div id="menu">
+
+            <h1>OPIA</h1>
+
+            <nav class="mobile_nav">
+                <div class="button_container" id="toggle">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+
+                <div class="overlay" id="overlay">
+                    <nav class="overlay-menu">
+                        <ul>
+                            <li> <a href="index.html">FORSIDE</a></li>
+                            <li class="current_page">PRODUKTER</li>
+                            <li> <a href="kontakt.html">KONTAKT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
         <section class="hero">
             <img class="hero_mobile" src="billeder/hero_mobile.png" alt="hero mobile">
         </section>
