@@ -25,15 +25,12 @@ function listenL() {
             container_L.classList.add("scroll_snap_type_y_mandatory");
             container_R.classList.remove("scroll_snap_type_y_mandatory");
             container_LHasScrollSnap = false;
-            //                container_RHasScrollSnap = false
         }
     }
     isLeftSideScrolling = true;
 }
 
-document.querySelector(".container_right").addEventListener("scroll", listenR);
-
-
+container_R.addEventListener("scroll", listenR);
 // kontrollere højre del af skærmen
 function listenR() {
 
@@ -46,7 +43,6 @@ function listenR() {
             //                    console.log("BOOOOM R");
             container_R.classList.add("scroll_snap_type_y_mandatory");
             container_L.classList.remove("scroll_snap_type_y_mandatory");
-            //                container_RHasScrollSnap = true;
             container_LHasScrollSnap = true;
         }
 
