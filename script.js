@@ -50,9 +50,43 @@ function listenR() {
     isLeftSideScrolling = false;
 }
 
+/* carls kode */
+let slideIndex = 0;
+
+carousel()
+setTimeout(loader, 4000);
+
+function carousel() {
+    let i;
+    let x = document.querySelectorAll(".mySlides");
 
 
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {
+        slideIndex = 1
+    }
+    x[slideIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
 
+function loader() {
+    console.log(loader);
+
+    // document.querySelector(".").classList.remove("sort");
+    document.querySelector(".baggrund").classList.add("fadeout");
+
+    document.querySelector(".loader").classList.add("fadeout");
+    //document.querySelector(".loader").classList.add("hide");
+    document.querySelector(".baggrund").addEventListener("animationend", hidebaggrund);
+}
+
+function hidebaggrund() {
+    document.querySelector(".loader").classList.add("hide");
+}
+/*carls kode slut*/
 
 
 //var div1 = document.querySelector('.container_left');
