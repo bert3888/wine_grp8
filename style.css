@@ -16,21 +16,23 @@ img {
     height: 100%;
 }
 
+/*---------------- Basics ----------------*/
+
 #mobile {
     display: none;
 }
 
 h1 {
-    margin: 0 0 0 1.5rem;
+    /*    margin: 0 0 0 1.5rem;*/
     padding: 0;
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
-    font-size: 6rem;
+    font-size: 8vw;
 }
 
 h2 {
-    padding-top: 4rem;
-    margin: 0 0 0 1.5rem;
+    /*    padding-top: 4rem;*/
+    /*    margin: 0 0 0 1.5rem;*/
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -39,8 +41,8 @@ h2 {
 }
 
 p {
-    margin: 1.5rem;
-    font-family: freight-sans-pro, sans-serif;
+    /*    margin: 1.5rem;*/
+    font-family: freight-neo-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 1.3rem;
@@ -48,6 +50,7 @@ p {
 
 .txt {
     margin-top: 6rem;
+    padding: 0 3rem 0 3rem;
 }
 
 .linebreak {
@@ -55,9 +58,9 @@ p {
     background-size: cover;
     background-position: center;
     height: 0.5vw;
-    width: 70vh;
     justify-content: center;
     margin-left: 2rem;
+    margin-right: 6rem;
 }
 
 .spotlight {
@@ -93,33 +96,27 @@ p {
 }
 */
 
-
-
-.button_spotlight {
-    font-size: 2rem;
-    padding: 1.5rem;
-    margin: 0.5rem;
-    border: none;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    color: white;
-    background: rgb(196, 211, 138);
-    background: linear-gradient(90deg, rgba(196, 211, 138, 1) 0%, rgba(199, 137, 100, 1) 61%, rgba(218, 131, 112, 1) 100%)
-}
-
-
-
 /*
-.button_background {
-    margin-top: 20rem;
-    margin-right: 10rem;
-    margin-left: 10rem;
+.button.background {
+    margin-right: 1rem;
 }
 */
 
+.button_spotlight {
+    font-size: 2rem;
+    /*    padding: 1.5rem;*/
+    /*    margin: 0.5rem;*/
+    border: none;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    color: blakc;
+    background: white;
+    font-family: freight-neo-pro, sans-serif;
+}
+
 #linje {
     position: fixed;
-    height: 8vh;
+    height: 10vh;
     width: 100vw;
     background-color: white;
 }
@@ -177,7 +174,80 @@ section {
 }
 
 
+/* carls styling */
 
+
+.mySlides {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    margin: 0px;
+    z-index: 101;
+    background-color: black;
+    object-fit: cover;
+}
+
+body {
+    margin: 0px;
+}
+
+.sort {
+    background-color: black;
+
+}
+
+.hide {
+    display: none;
+    pointer-events: none;
+
+}
+
+.fadeout {
+    animation-name: fadeout_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+        display: none;
+        pointer-events: none;
+    }
+
+}
+
+.baggrund {
+    position: fixed;
+    z-index: 100;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*carls styling slut*/
 
 
 /*---------Media Query-------------*/
@@ -234,6 +304,10 @@ section {
         justify-content: center;
     }
 
+    .gap {
+        padding-top: 2rem;
+    }
+
     h1 {
         margin: 0 0 0 1.5rem;
         padding: 0;
@@ -281,7 +355,7 @@ section {
     .button_spotlight {
         font-size: 1rem;
         padding: 1.5rem;
-        margin: 2rem;
+        margin: 0 2rem;
         border: none;
         border-radius: 0.5rem;
         text-transform: uppercase;
@@ -296,9 +370,11 @@ section {
         margin-right: 2rem;
     }
 }
-
 }
 
+
+
+/*
 @media only screen and (min-width:769px) {
     .desktop {
         display: block;
@@ -308,3 +384,4 @@ section {
         display: none;
     }
 }
+*/
