@@ -98,6 +98,20 @@ function hidebaggrund() {
 }
 
 
+//burgermenu
+
+const btn = document.querySelector("#toggle");
+const overlay = document.querySelector("#overlay")
+
+btn.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+    btn.classList.toggle("active");
+    overlay.classList.toggle("open")
+}
+
+
+
 
 //var div1 = document.querySelector('.container_left');
 ////var div2 = document.querySelector('.container_right');

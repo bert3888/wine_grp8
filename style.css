@@ -119,7 +119,11 @@ p {
     height: 80px;
     width: 100vw;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
+
+
 
 #menu h1 {
     font-family: freight-sans-pro, sans-serif;
@@ -493,6 +497,43 @@ body {
         display: none;
     }
 
+    #desktop_nav {
+        display: inline;
+        max-width: 1200px;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #desktop_nav a {
+        font-size: 1.2rem;
+
+    }
+
+    #mobile .col2 {
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+    nav a {
+        font-family: freight-neo-pro, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        transition: 0.5s;
+        padding-right: 20px;
+
+    }
+
+    nav a:hover {
+        color: rgb(234, 104, 45);
+        color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
+        transition: 0.5s;
+    }
 
     /*
     .wrapper {
