@@ -323,6 +323,7 @@ section {
     min-height: 50px;
     position: relative;
     opacity: 0;
+    font-size: 1.2rem;
 }
 
 .mobile_nav {

@@ -269,6 +269,12 @@ nav a {
 
 }
 
+nav a:hover {
+    color: rgb(234, 104, 45);
+    color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
+    transition: 0.5s;
+}
+
 #menu a:hover {
     color: rgb(234, 104, 45);
     color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
@@ -540,7 +546,42 @@ footer a {
     margin-left: 3vw;
 }
 
+/*--------------KONTAKT SIDE-------------*/
+#herobillede {
+    background-image: url(billeder/hero.png);
+    background-size: cover;
+    width: 100vw;
+    height: 70vh;
+}
 
+.kontaktparent {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: 3vw;
+
+}
+
+.kontaktcol {
+    padding: 30px;
+}
+
+#kontakt h2 {
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    padding-bottom: 10px;
+
+}
+
+#kontakt p {
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+
+}
 
 
 /* ---------- ANIMATONER -------------*/
