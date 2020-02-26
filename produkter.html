@@ -25,15 +25,18 @@
         </article>
     </template>
 
-
+    <!--    burger menu-->
     <header>
         <nav class="mobile_nav">
+
+            <!--           ikonet som bliver animeret med css-->
             <div class="button_container" id="toggle">
                 <span class="top"></span>
                 <span class="middle"></span>
                 <span class="bottom"></span>
             </div>
 
+            <!--           overlayet som bliver lagt over skærmen når man klikker på ikonet-->
             <div class="overlay" id="overlay">
                 <nav class="overlay-menu">
                     <ul>
@@ -44,12 +47,20 @@
                 </nav>
             </div>
         </nav>
+        <!--    burger menu end ------>
+
+
+        <!--    desktop menu og logo -------->
         <div id="menu">
+
+            <!--           logo-->
             <div class="col1">
                 <a href="index.html">
                     <h1>OPIA</h1>
                 </a>
             </div>
+
+            <!--            menuen-->
             <div class="col2">
                 <nav id="desktop_nav" class="hide">
                     <a href="index.html">FORSIDE</a>
@@ -57,14 +68,22 @@
                     <a href="kontakt.html">KONTAKT</a>
                 </nav>
             </div>
-        </div>
 
+        </div>
+        <!--    desktop menu end -------->
+
+        <!--   logo som kører rundt -------->
         <div class="logo">
             <img src="imgs/logo_head.svg" alt="logo">
             <img class="roundabout" src="imgs/logotext.svg" alt="logo2">
         </div>
+
+        <!--   spacer som ligger under logo så logo har plads-------->
         <section class="spacer"></section>
+
     </header>
+
+    <!--    knapperner som bruges til filtrering-->
     <section class="filterknapper">
         <div>
             <button type="button" class="filter valgt" data-produkt="alle">Alle</button>
@@ -75,20 +94,11 @@
         </div>
     </section>
 
+    <!--   container som ligger rundt om alle produkter og har grid-->
     <section class="data-container"></section>
 
-    <section id="detalje" class="hide">
-        <article class="infoboks">
 
-            <img>
-            <h1 class="navn"></h1>
-            <h2 class="year"></h2>
-            <p class="origin"></p>
-            <p class="beskrivelse"></p>
-
-        </article>
-    </section>
-
+    <!--footer med kontakt infomation-->
     <footer>
         <div>
             <p class="footertitle">OPIA VIN</p>
@@ -102,7 +112,6 @@
         </div>
 
     </footer>
-
 
 
     <script src="produkter.js"></script>

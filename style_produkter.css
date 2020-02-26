@@ -2,7 +2,6 @@
 
 * {
     margin: 0;
-
 }
 
 body {
@@ -22,6 +21,7 @@ img {
 /* ---------- PRODUKTSTYLING -------------*/
 
 
+/*styling til container rundt om alle produkter*/
 .data-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -32,25 +32,22 @@ img {
     padding-right: 20px;
     padding-bottom: 50px;
 
-
-
 }
 
+/*styling til hver produkt*/
 .produkt {
-
     cursor: pointer;
     margin: 10px 10px 50px 10px;
-    /*    box-shadow: 0px 5px 5px 2.5px rgba(0, 0, 0, 0.1);
-*/
+    box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.05);
 }
 
+/*alle produktbilleder og gør at de passer ind i kassen*/
 .image {
     max-width: 100%;
     max-height: 100%;
-
 }
 
-
+/*alt herunder er styling til skriften for hvert produkt*/
 .navn {
     font-family: freight-sans-pro, sans-serif;
     font-weight: 600;
@@ -58,6 +55,7 @@ img {
     font-size: 2rem;
     text-transform: uppercase;
     margin-top: 15px;
+    padding-left: 20px;
 }
 
 .year {
@@ -65,6 +63,7 @@ img {
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
+    padding-left: 20px;
 
 }
 
@@ -73,12 +72,15 @@ img {
     font-weight: 300;
     font-style: normal;
     font-size: 1.2rem;
+    padding-left: 20px;
 }
 
 .origin {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .oprindelse {
@@ -88,34 +90,43 @@ img {
     font-size: 1rem;
     text-transform: uppercase;
     margin-top: 10px;
+    padding-left: 20px;
+
 }
 
 /*+ --------------------- DETALJE VIEW -----------*/
 
+/*styling til billederne i detalje view som har snap scroll*/
 #detalje .image_detalje {
     max-width: 100%;
     max-height: 100%;
     width: 100vw;
+    /*snapscroll på x axis og snapper automatisk*/
     scroll-snap-type: x mandatory;
+    /*gør at man  kan scrolle på billederne*/
     overflow-x: scroll;
     display: flex;
 }
 
+/*gør at alle 3 billederne lander i midten når de snapper*/
 .img1,
 .img2,
 .img3 {
     scroll-snap-align: center;
+
+}
+
+#detalje img {
+    object-fit: cover;
 }
 
 
-
-
 #detalje .detalje_text {
-    /*    width: 50vw;*/
     padding: 20px;
 
 }
 
+/*styling til tilbage knap på detalje view*/
 #detalje button {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 300;
@@ -140,12 +151,15 @@ img {
     cursor: pointer;
 }
 
+/*alt herunder styling til tekst på detalje view*/
 #detalje .navn {
     font-family: freight-sans-pro, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 2rem;
     text-transform: uppercase;
+    padding-left: 5px;
+
 }
 
 #detalje .year {
@@ -153,6 +167,7 @@ img {
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
+    padding-left: 5px;
 
 }
 
@@ -161,6 +176,7 @@ img {
     font-weight: 300;
     font-style: normal;
     font-size: 1.2rem;
+    padding-left: 5px;
 }
 
 #detalje .origin {
@@ -168,6 +184,7 @@ img {
     font-weight: 300;
     font-style: normal;
     font-size: 1rem;
+    padding-left: 5px;
 }
 
 #detalje .oprindelse {
@@ -177,6 +194,7 @@ img {
     font-size: 1.1rem;
     text-transform: uppercase;
     margin-top: 10px;
+    padding-left: 5px;
 }
 
 #detalje .beskrivelse {
@@ -184,6 +202,7 @@ img {
     font-weight: 300;
     font-style: normal;
     font-size: 1.3rem;
+    padding-left: 5px;
 }
 
 #detalje .type {
@@ -192,15 +211,16 @@ img {
     font-style: normal;
     font-size: 1.2rem;
     margin-top: 5px;
+    padding-left: 5px;
 }
 
 /* ---------- FILTERKNAPPER -------------*/
+
+/*alt herunder er styling til filterknapperne, hvordan de skal se ud og .valgt klassen som de får når en knap er valgt */
 .filterknapper {
     text-align: center;
     margin: 10px 10px 30px 10px;
-
 }
-
 
 button {
     font-family: freight-neo-pro, sans-serif;
@@ -214,6 +234,7 @@ button {
     text-align: center;
     margin: 10px;
     color: white;
+    cursor: pointer;
 }
 
 .valgt {
@@ -329,16 +350,16 @@ header img {
     height: 27px;
     width: 35px;
     cursor: pointer;
-    -webkit-transition: opacity .25s ease;
+    /*    -webkit-transition: opacity .25s ease;*/
     transition: opacity .25s ease;
     z-index: 100;
-    pointer-events: auto;
+    /*    pointer-events: auto;*/
     right: 4vw;
     top: 3.5vw;
 }
 
 .button_container.active .top {
-    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+    /*    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);*/
     transform: translateY(8px) translateX(0) rotate(45deg);
     background: #000;
 }
@@ -349,7 +370,7 @@ header img {
 }
 
 .button_container.active .bottom {
-    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    /*    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);*/
     transform: translateY(-8px) translateX(0) rotate(-45deg);
     background: #000;
 }
@@ -362,7 +383,7 @@ header img {
     position: absolute;
     top: 5px;
     left: 0;
-    -webkit-transition: all .35s ease;
+    /*    -webkit-transition: all .35s ease;*/
     transition: all .35s ease;
     cursor: pointer;
 }
@@ -384,7 +405,7 @@ header img {
     height: 0%;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity .35s, visibility .35s, height .35s;
+    /*    -webkit-transition: opacity .35s, visibility .35s, height .35s;*/
     transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden;
     z-index: 90;
@@ -397,14 +418,14 @@ header img {
 }
 
 .overlay.open li {
-    -webkit-animation: fadeInRight .5s ease forwards;
+    /*    -webkit-animation: fadeInRight .5s ease forwards;*/
     animation: fadeInRight .5s ease forwards;
-    -webkit-animation-delay: .35s;
+    /*    -webkit-animation-delay: .35s;*/
     animation-delay: .35s;
 }
 
 .overlay.open li:nth-of-type(2) {
-    -webkit-animation-delay: .4s;
+    /*    -webkit-animation-delay: .4s;*/
     animation-delay: .4s;
 }
 
@@ -412,7 +433,7 @@ header img {
 .overlay nav {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
+    /*    -webkit-transform: translateY(-50%);*/
     transform: translateY(-50%);
     /*    font-size: 2em;*/
     font-family: 'freight-neo-pro', sans-serif;
