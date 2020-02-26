@@ -111,7 +111,7 @@ img {
 
 
 #detalje .detalje_text {
-    width: 50vw;
+    /*    width: 50vw;*/
     padding: 20px;
 
 }
@@ -129,10 +129,13 @@ img {
     padding: 10px;
     transition: 0.3s;
     cursor: pointer;
+    background: none;
 }
 
 #detalje button:hover {
-    color: darkmagenta;
+
+    color: rgb(234, 104, 45);
+    color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
     transition: 0.3s;
     cursor: pointer;
 }
@@ -164,13 +167,14 @@ img {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
+    font-size: 1rem;
 }
 
 #detalje .oprindelse {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     margin-top: 10px;
 }
@@ -179,6 +183,15 @@ img {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
+    font-size: 1.3rem;
+}
+
+#detalje .type {
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-top: 5px;
 }
 
 /* ---------- FILTERKNAPPER -------------*/
@@ -196,13 +209,16 @@ button {
     font-size: 1rem;
     padding: 5px 20px 5px 20px;
     border: none;
-    background-color: lightgray;
+    background: rgb(234, 104, 45);
+    background: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
     text-align: center;
     margin: 10px;
+    color: white;
 }
 
 .valgt {
     background-color: black;
+    background: black;
     color: white;
 }
 
@@ -232,11 +248,19 @@ nav a {
 
 }
 
+#menu a:hover {
+    color: rgb(234, 104, 45);
+    color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
+    transition: 0.5s;
+}
+
+/*
 nav a:hover {
     color: rgb(234, 104, 45);
     color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
     transition: 0.5s;
 }
+*/
 
 .image {
     background-size: cover;
@@ -246,15 +270,21 @@ nav a:hover {
 }
 
 header img {
-    width: 50vw;
+    width: 300px;
     position: absolute;
-    top: 5vw;
-    margin-left: 25vw;
+    top: 13vw;
+
+}
+
+.logo {
+    width: 300px;
+    margin: 0 auto;
 }
 
 .spacer {
     height: 50vh;
 }
+
 
 #menu {
     display: flex;
@@ -264,6 +294,7 @@ header img {
 #menu a {
     color: black;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 #mobile .col2 {
@@ -277,7 +308,6 @@ header img {
     width: 100vw;
     background-color: white;
     display: flex;
-
     justify-content: space-between;
 }
 
@@ -295,7 +325,7 @@ header img {
 /* -------------------nav til burgermenu---------- */
 
 .button_container {
-    position: relative;
+    position: fixed;
     height: 27px;
     width: 35px;
     cursor: pointer;
@@ -303,6 +333,8 @@ header img {
     transition: opacity .25s ease;
     z-index: 100;
     pointer-events: auto;
+    right: 4vw;
+    top: 3.5vw;
 }
 
 .button_container.active .top {
@@ -382,7 +414,7 @@ header img {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-size: 2em;
+    /*    font-size: 2em;*/
     font-family: 'freight-neo-pro', sans-serif;
     text-align: left;
     left: 20px;
@@ -417,8 +449,9 @@ header img {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.4rem;
-    color: #707070;
+    font-size: 1.2rem;
+    color: rgb(234, 104, 45);
+    color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
 }
 
 
@@ -466,13 +499,14 @@ footer {
     background: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
     color: white;
     margin-top: 50px;
+    display: flex;
 
 
 }
 
-footer h2 {
-    margin-left: 3vw;
-    font-weight: 300
+footer .footertitle {
+    margin-bottom: 5px;
+    font-weight: 400;
 }
 
 footer p {
@@ -519,12 +553,14 @@ footer a {
 
 
 
+
     header img {
-        width: 35vw;
+
         position: absolute;
-        top: 2vw;
-        margin-left: 32.5vw;
+        top: 4vw;
+
     }
+
 
     .spacer {
         height: 40vh;
@@ -532,6 +568,12 @@ footer a {
 
     #detalje article {
         display: flex;
+    }
+
+    #detalje .detalje_text {
+        width: 50vw;
+        padding: 20px;
+
     }
 
 }
@@ -556,12 +598,14 @@ footer a {
 
 
 
+
     header img {
-        width: 20vw;
+
         position: absolute;
-        top: 2vw;
-        margin-left: 40vw;
+        top: 4vw;
+
     }
+
 
     .spacer {
         height: 50vh;

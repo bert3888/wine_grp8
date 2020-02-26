@@ -24,6 +24,7 @@
             <div class="detalje_text">
                 <h1 class="navn"></h1>
                 <h2 class="year"></h2>
+                <h3 class="type"></h3>
                 <p class="oprindelse">Oprindelse</p>
                 <p class="origin"></p><br>
                 <p class="beskrivelse"></p>
@@ -77,6 +78,7 @@
                     document.querySelector("#detalje .beskrivelse").textContent = produkt.gsx$beskrivelse.$t;
                     document.querySelector("#detalje .origin").textContent = produkt.gsx$origin.$t;
                     document.querySelector("#detalje .year").textContent = produkt.gsx$year.$t;
+                    document.querySelector("#detalje .type").textContent = produkt.gsx$type.$t;
                     document.querySelector(".img1").src = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
                     document.querySelector(".img2").src = "imgs/" + produkt.gsx$billede.$t + "-closeup2.png";
                     document.querySelector(".img3").src = "imgs/" + produkt.gsx$billede.$t + "-bottleglass.png";
