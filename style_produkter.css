@@ -24,8 +24,8 @@ img {
 /*styling til container rundt om alle produkter*/
 .data-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    max-width: 1000px;
+    /* Her definerer alt inde i containeren som et "block level grid" */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));/ max-width: 1000px;
     margin: 0 auto;
     grid-gap: 10px;
     padding-left: 20px;
@@ -365,19 +365,20 @@ header img {
 }
 
 .button_container.active .top {
-    /*    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);*/
     transform: translateY(8px) translateX(0) rotate(45deg);
+    /*Øverste roterer nedad */
     background: #000;
 }
 
 .button_container.active .middle {
     opacity: 0;
+    /* Midterste streg forsvinder */
     background: #000;
 }
 
 .button_container.active .bottom {
-    /*    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);*/
     transform: translateY(-8px) translateX(0) rotate(-45deg);
+    /*Øverste roterer opad */
     background: #000;
 }
 
