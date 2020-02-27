@@ -601,6 +601,7 @@ footer a {
     background-size: cover;
     width: 100vw;
     height: 70vh;
+    background-position: center;
 }
 
 .kontaktparent {
