@@ -4,28 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vores produkter</title>
+    <title>Kontakt</title>
     <link rel="stylesheet" href="style_produkter.css">
     <link rel="stylesheet" href="https://use.typekit.net/fqv3iyy.css">
 </head>
 
 <body>
-
-    <!-------------  template til produkter------------------>
-    <template>
-        <article class="produkt">
-            <div class="image">
-                <img>
-            </div>
-            <h2 class="navn"></h2>
-            <h3 class="year"></h3>
-            <p class="type"></p>
-            <p class="oprindelse">Oprindelse</p>
-            <p class="origin"></p>
-        </article>
-    </template>
-
-    <!--    burger menu-->
     <header>
         <nav class="mobile_nav">
 
@@ -41,15 +25,13 @@
                 <nav class="overlay-menu">
                     <ul>
                         <li> <a href="index.html">FORSIDE</a></li>
-                        <li class="current_page">PRODUKTER</li>
-                        <li> <a href="kontakt.html">KONTAKT</a></li>
+                        <li><a href="produkter.html">PRODUKTER</a></li>
+                        <li class="current_page">KONTAKT</li>
                     </ul>
                 </nav>
             </div>
         </nav>
         <!--    burger menu end ------>
-
-
         <!--    desktop menu og logo -------->
         <div id="menu">
 
@@ -70,35 +52,26 @@
             </div>
 
         </div>
-        <!--    desktop menu end -------->
-
-        <!--   logo som kører rundt -------->
-        <div class="logo">
-            <img src="imgs/logo_head.svg" alt="logo">
-            <img class="roundabout" src="imgs/logotext.svg" alt="logo2">
-        </div>
-
-        <!--   spacer som ligger under logo så logo har plads-------->
-        <section class="spacer"></section>
-
     </header>
 
-    <!--    knapperner som bruges til filtrering-->
-    <section class="filterknapper">
-        <div>
-            <button type="button" class="filter valgt" data-produkt="alle">Alle</button>
-            <button type="button" class="filter" data-produkt="Rødvin">Rødvin</button>
-            <button type="button" class="filter" data-produkt="Hvidvin">Hvidvin</button>
-            <button type="button" class="filter" data-produkt="Rosé">Rosé</button>
-
+    <section id="kontakt">
+        <div id="herobillede"></div>
+        <div class="kontaktparent">
+            <div class="kontaktcol">
+                <h2>KONTAKT OS!</h2>
+                <p>Du kan altid sende os en mail, eller sende os en DM på Instagram <br> og vi prøver at svare hurtigst muligt!</p><br>
+                <p>hello@opia.dk</p>
+                <p>+45 34 56 76 45</p>
+            </div>
+            <div class="kontaktcol">
+                <h2>Her er vi!</h2>
+                <p>Guldbergsgade 29, København N</p>
+            </div>
         </div>
     </section>
 
-    <!--   container som ligger rundt om alle produkter og har grid-->
-    <section class="data-container"></section>
+    <!--    desktop menu end -------->
 
-
-    <!--footer med kontakt infomation-->
     <footer>
         <div>
             <p class="footertitle">OPIA VIN</p>
@@ -112,6 +85,8 @@
         </div>
 
     </footer>
+
+
 
 
     <script src="produkter.js"></script>

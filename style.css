@@ -27,7 +27,7 @@ h1 {
     padding: 0;
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
-    font-size: 7.5vw;
+    font-size: 5vw;
 }
 
 h2 {
@@ -112,13 +112,15 @@ p {
 */
 
 .button_spotlight {
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding: 0.5rem 1.5rem 0.5rem 1rem;
     border: black 1px solid;
     border-radius: 1rem;
     text-transform: capitalize;
     color: black;
     background: white;
+    cursor: pointer;
+    text-decoration: none;
     font-family: freight-neo-pro, sans-serif;
 }
 
@@ -297,7 +299,7 @@ section {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-size: 2em;
+
     font-family: 'freight-neo-pro', sans-serif;
     text-align: left;
     left: 20px;
@@ -321,6 +323,7 @@ section {
     min-height: 50px;
     position: relative;
     opacity: 0;
+    font-size: 1.2rem;
 }
 
 .mobile_nav {
@@ -332,8 +335,9 @@ section {
     font-family: freight-neo-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.4rem;
-    color: #707070;
+    font-size: 1.2rem;
+    color: rgb(234, 104, 45);
+    color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
 }
 
 
@@ -632,7 +636,7 @@ body {
         margin: 0 2rem;
         border: 1px black solid;
         border-radius: 0.5rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
         color: black;
         background: white;
         font-family: freight-neo-pro, sans-serif;

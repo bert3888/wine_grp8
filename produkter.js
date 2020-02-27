@@ -41,8 +41,6 @@ function visProdukter() {
             klon.querySelector(".origin").textContent = produkt.gsx$origin.$t;
             klon.querySelector("img").src = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
 
-            //klon.querySelector(".image").style.backgroundImage = "imgs/" + produkt.gsx$billede.$t + "-singlebottle.png";
-
             container.appendChild(klon);
 
             // sætter event listener på det sidste man trykker paa og linker til detalje view
@@ -68,22 +66,22 @@ function filtrering() {
     console.log("FILTER");
     filter = this.dataset.produkt;
     document.querySelectorAll(".filter").forEach(elm2 => {
-        elm2.classList.remove("valgt");
+        elm2.classList.remove("valgt"); // fjerner valgt classen fra alle knapper
     })
-    this.classList.add("valgt");
+    this.classList.add("valgt"); // sæter class paa så man kan se hvilken filter er valgt
     visProdukter();
 }
 
 
 
 //burgermenu
-
 const btn = document.querySelector("#toggle");
 const overlay = document.querySelector("#overlay")
 
 btn.addEventListener("click", toggleMenu);
 
+// funktion som toggler classerne naar man åbner og lukker burger menuen
 function toggleMenu() {
     btn.classList.toggle("active");
-    overlay.classList.toggle("open")
+    overlay.classList.toggle("open");
 }
