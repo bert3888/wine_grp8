@@ -179,20 +179,20 @@ section {
 
 .scroll_snap_type_y_mandatory {
     scroll-snap-type: y mandatory;
+    /* Her definerer vi en class med scroll på y-aksen og den skal altid snappe. */
 }
 
 .container_left {
     width: 50vw;
     height: 100vh;
     overflow-y: scroll;
-    /*    scroll-snap-type: y mandatory;*/
+    /* Her definerer vi at al indhold skal vises idet man scroller ned */
 }
 
 .container_right {
     width: 50vw;
     height: 100vh;
     overflow-y: scroll;
-    /*    scroll-snap-type: y mandatory;*/
 }
 
 .section_left {

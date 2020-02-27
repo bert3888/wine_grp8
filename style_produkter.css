@@ -36,9 +36,12 @@ img {
     display: grid;
     /* Her definerer alt inde i containeren som et "block level grid" */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Her definerer vi hvert produkt til min at fylde 300px med lige meget plads og mellemrum */
     max-width: 1000px;
+    /* Her definerer vi max bredden. Altså kan der kun være 3 produkter ved siden af hinanden */
     margin: 0 auto;
     grid-gap: 10px;
+    /* mellemrummet mellem hvert produkt er sat til 10px */
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
