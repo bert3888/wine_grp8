@@ -12,16 +12,12 @@ container_R.scrollTop = container_R.scrollHeight - container_R.clientHeight - co
 container_L.addEventListener("scroll", listenL);
 // kontrollere venstre del af skærmen
 function listenL() {
-
-
-
     if (isLeftSideScrolling) {
         container_R.scrollTop = this.scrollHeight - this.clientHeight - this.scrollTop;
 
 
         // hvis venstre side bliver scrollet tilføjes scroll snap på venstre side
         if (container_LHasScrollSnap == true) {
-            //                    console.log("BOOOOM L")
             container_L.classList.add("scroll_snap_type_y_mandatory");
             container_R.classList.remove("scroll_snap_type_y_mandatory");
             container_LHasScrollSnap = false;
