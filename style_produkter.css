@@ -35,7 +35,8 @@ img {
 .data-container {
     display: grid;
     /* Her definerer alt inde i containeren som et "block level grid" */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));/ max-width: 1000px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1000px;
     margin: 0 auto;
     grid-gap: 10px;
     padding-left: 20px;
