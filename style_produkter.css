@@ -19,13 +19,59 @@ img {
 /*arrow til detalje view*/
 
 .arrow {
-    color: black;
+
+
     position: absolute;
-    top: 25vw;
-    left: 10vw;
+    top: 42vw;
+    left: 83vw;
     z-index: 10000;
     font-size: 3rem;
+    width: 50px;
+    object-fit: cover;
 }
+
+.previewimgs {
+    display: flex;
+    height: 100px;
+
+}
+
+.previewimgs img {
+    object-fit: cover;
+
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform: rotate(-90deg);
+
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: translateX(0);
+        opacity: 0.4;
+
+    }
+
+    50% {
+        transform: translateX(-0.4em);
+        opacity: 0.9;
+
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 0.4;
+
+    }
+
+
+}
+
+
 
 
 /* ---------- PRODUKTSTYLING -------------*/
@@ -650,6 +696,16 @@ footer a {
 
     }
 
+    .arrow {
+        color: black;
+        opacity: 0.4;
+        position: absolute;
+        top: 40vw;
+        left: 53vw;
+        z-index: 10000;
+        font-size: 3rem;
+    }
+
 }
 
 @media only screen and (min-width: 900px) {
@@ -683,5 +739,15 @@ footer a {
 
     .spacer {
         height: 50vh;
+    }
+
+    .arrow {
+        color: black;
+        opacity: 0.4;
+        position: absolute;
+        top: 28vw;
+        left: 57vw;
+        z-index: 10000;
+        font-size: 3rem;
     }
 }
