@@ -16,6 +16,16 @@ img {
     display: none;
 }
 
+/*arrow til detalje view*/
+
+.arrow {
+    color: black;
+    position: absolute;
+    top: 25vw;
+    left: 10vw;
+    z-index: 10000;
+    font-size: 3rem;
+}
 
 
 /* ---------- PRODUKTSTYLING -------------*/
