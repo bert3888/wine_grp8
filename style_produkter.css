@@ -22,11 +22,11 @@ img {
 
 
     position: absolute;
-    top: 42vw;
+    top: 45vw;
     left: 83vw;
     z-index: 10000;
     font-size: 3rem;
-    width: 50px;
+    width: 40px;
     object-fit: cover;
 }
 
